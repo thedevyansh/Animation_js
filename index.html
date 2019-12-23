@@ -31,7 +31,7 @@ var posX=0;
 function anime(){
               obj.fillRect(-(w/2),-(h/2),w,h);
 obj.drawImage(image, (sprite*102), 0, 102, 148, 0+posX, -74, 102, 148);   
-if (posX % 15 === 0) {
+if (posX % 17 === 0) {
     if (sprite === 5) {
       sprite = 0;
     } else {
@@ -40,7 +40,7 @@ if (posX % 15 === 0) {
   }
 if(posX > w/2) {
     newStart = -((w/2) + 102);
-    posX = Math.ceil(newStart/15) * 15;
+    posX = Math.ceil(newStart/17) * 17;
   } else {
     posX += 3;
   }
