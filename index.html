@@ -13,19 +13,19 @@
     </style>
   </head>
   <body>
-    <canvas id="myCanvas">  </canvas>
+    <canvas class="myCanvas">  </canvas>
 
     <script>
-      var canvas = document.getElementById('myCanvas');
-      var w = canvas.width = window.innerWidth;
-      var h = canvas.height = window.innerHeight;
-      var obj = canvas.getContext('2d');
+      const canvas = document.querySelector('.myCanvas');
+      const w = canvas.width = window.innerWidth;
+      const h = canvas.height = window.innerHeight;
+      const obj = canvas.getContext('2d');
       obj.fillStyle = 'rgb(50,0,0)';
       obj.fillRect(0,0,w,h);
       obj.translate(w/2,h/2);
-      const image = new Image();
+      let image = new Image();
       image.src = 'walk-right.png';
-      window.onload=anime;
+      image.onload= anime;
 var sprite=0;
 var posX=0;
 function anime(){
