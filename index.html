@@ -9,31 +9,22 @@
                 margin:0;     
                 overflow: hidden;
       }
-     #myCanvas {
-                                 border:4px solid #000000;
-                                 margin-left:9%;
-      }
-      h2 {
-            font-family:georgia;
-            margin-left:25%;
-            font:rgb(50,0,0);
-      }
+      
     </style>
   </head>
   <body>
-    <h2>A sprite walking on the canvas</h2>
-<img src="walk-right.png" id="_walk" style="display:none;">
-    <canvas id="myCanvas" width="1000" height="500">  </canvas>
+    <canvas id="myCanvas">  </canvas>
 
     <script>
       var canvas = document.getElementById('myCanvas');
-      var w = canvas.width;
-      var h = canvas.height;
+      var w = canvas.width = window.innerWidth;
+      var h = canvas.height = window.innerHeight;
       var obj = canvas.getContext('2d');
       obj.fillStyle = 'rgb(50,0,0)';
       obj.fillRect(0,0,w,h);
       obj.translate(w/2,h/2);
-      var image=document.getElementById('_walk');
+      const image = new Image();
+      image.src = 'walk-right.png';
       window.onload=anime;
 var sprite=0;
 var posX=0;
